@@ -1,0 +1,10 @@
+version: "3.9"  # optional since v1.27.0
+
+services:
+  filestat-exporter:
+    container_name: filestat-exporter
+    build: ./filestat-exporter
+    ports:
+      - "9943:9943"
+    volumes:
+      - /:/machine:ro
